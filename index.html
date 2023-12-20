@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  section {
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  pre,
+  code {
+    font-family: Consolas, "courier new";
+    color: rgb(20, 40, 220);
+    background-color: #f1f1f1;
+    padding-top: 25px;
+    text-wrap: wrap;
+    width: 800px;
+
+  }
+</style>
+<body>
+  <section>
+    <h1>1.JavaScript: 字串反轉</h1>
+    <pre>
+      function reverseString(str) {
+        return str.split('').reverse().join('');
+      }
+    </pre>
+  </section>
+  <section>
+    <h1>2.JavaScript: 陣列過濾</h1>
+    <pre>
+      function getNumbersGreaterThan5(arr) {
+        return arr.filter(number => number > 5);
+      }
+    </pre>
+  </section>
+  <section>
+    <h1>3.JavaScript: 重構</h1>
+    <p>此為合併姓名的函示，姓名之前加入空格。<br>改使用filter，將 firstName 和 lastName 放入陣列中，然後使用 filter(Boolean) 來去除值為 undefined 或 null
+      的元素。之後使用 join
+      方法將陣列中的元素連接成一個字符串，以空格分隔。</p>
+    <pre>
+      function formatName(firstName, lastName) {
+        const formattedName = [firstName, lastName].filter((name) => name);
+        return formattedNameParts.join(' ');
+      }
+    </pre>
+  </section>
+  <section>
+    <h1>4.React: 條件渲染</h1>
+    <p>可以使用if判斷，以下是使用三元條件範例</p>
+    <pre>
+      function ConditionalRendering({ isLoggedIn }) {
+        return (
+          <div>
+            {isLoggedIn ? (//content1) : (//content2)}
+          </div>
+        );
+      }
+    </pre>
+  </section>
+  <section>
+    <h1>5.React: 組件</h1>
+    <p>建立一個count.js檔案，引入react，最後export出去使用</p>
+    <pre>
+      function Counter() {
+        const [count, setCount] = useState(0);
+      
+        const increaseCount = () => {
+          setCount(count + 1);
+        };
+      
+        const decreaseCount = () => {
+          setCount(count - 1);
+        };
+      
+        return (
+          <div>
+            <p>Count: {count}</p>
+            <button onClick={increaseCount}>Increase</button>
+            <button onClick={decreaseCount}>Decrease</button>
+          </div>
+        );
+      }
+      
+      export default Counter;
+    </pre>
+  </section>
+
+  <script>
+    //1
+    function reverseString(str) {
+      return str.split('').reverse().join('');
+    }
+    console.log(reverseString("Hello")); // 預期輸出: "olleH"
+    //2
+    function getNumbersGreaterThan5(arr) {
+      return arr.filter(number => number > 5);
+    }
+    const numbers = [2, 8, 4, 10, 1, 7];
+    console.log(getNumbersGreaterThan5(numbers));
+  </script>
+</body>
+</html>
