@@ -33,7 +33,7 @@ function formatName(firstName, lastName) {
 function ConditionalRendering({ isLoggedIn }) {
   return (
     <div>
-      {isLoggedIn ? (//content1) : (//content2)}
+      {isLoggedIn ? (content1) : (content2)}
     </div>
   );
 }
