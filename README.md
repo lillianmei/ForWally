@@ -17,7 +17,7 @@ function getNumbersGreaterThan5(arr) {
 ```
 
 * 3.JavaScript: 重構
-* 此為合併姓名的函示，姓名之前加入空格。改使用filter，將 firstName 和 lastName 放入陣列中，然後使用 filter(Boolean) 來去除值為 undefined 或 null的元素。之後使用 join 方法將陣列中的元素連接成一個字符串，以空格分隔。
+* 此為合併姓名的函示，姓名之間加入空格。改使用filter，將 firstName 和 lastName 放入陣列中，然後使用 filter() 來去除值為 undefined 或 null的元素。之後使用 join 方法將陣列中的元素連接成一個字符串，以空格分隔。
 
 ```javascript
 function formatName(firstName, lastName) {
