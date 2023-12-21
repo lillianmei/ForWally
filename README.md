@@ -11,7 +11,7 @@ function reverseString(str) {
 * 2.JavaScript: 陣列過濾
 
 ```javascript
-function getNumbersGreaterThan5(arr) {
+function getNumbersGreaterThanFive(arr) {
   return arr.filter(number => number > 5);
 }
 ```
@@ -21,8 +21,8 @@ function getNumbersGreaterThan5(arr) {
 
 ```javascript
 function formatName(firstName, lastName) {
-  const formattedName = [firstName, lastName].filter((name) => name);
-  return formattedNameParts.join(' ');
+  const formattedNameArray = [firstName, lastName].filter((name) => name);
+  return formattedNameArray.join(' ');
 }
 ```
 
